@@ -1,0 +1,43 @@
+/* Add these styles to your external stylesheet, e.g., App.css */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.non-blown-out {
+  height: 400px;
+  width: 390px;
+  background-image: url("./assets/CakeAnim.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.blown-out {
+  height: 400px;
+  width: 390px;
+  background-image: url("./assets/noAnimCake.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.happy-text {
+  font-family: "Tangerine";
+  margin: 0;
+  margin-top: -20px;
+  font-size: 100px;
+  z-index: 10;
+}
+
+.outlined-text {
+  font-family: "Barlow Condensed";
+  margin: 0;
+  margin-top: -30px;
+  font-size: 60px;
+  color: #89a9dd;
+  -webkit-text-stroke: 2px black;
+}
