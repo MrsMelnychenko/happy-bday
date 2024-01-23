@@ -37,9 +37,7 @@ const BirthdayCard = () => {
 
       mediaRecorder.start();
 
-      // Stop recording after 3 seconds
       setTimeout(() => {
-        console.log("I am stopped");
         mediaRecorder.stop();
       }, 2000);
     } catch (error) {
@@ -69,7 +67,6 @@ const BirthdayCard = () => {
       const averageVolume =
         dataArray.reduce((acc, value) => acc + value, 0) / bufferLength;
 
-      // You can adjust this threshold based on testing
       const soundThreshold = 10;
 
       if (averageVolume > soundThreshold) {
@@ -79,22 +76,18 @@ const BirthdayCard = () => {
         console.log("There was silence");
       }
 
-      // Continue checking for sound until the audio ends
       if (!audioElement.ended) {
         requestAnimationFrame(checkForSound);
       }
     };
 
-    // Start playing the audio
     audioElement.play();
 
-    // Stop the audio context after 3 seconds
     setTimeout(() => {
       console.log("I am stopped");
       audioContext.close();
     }, 3000);
 
-    // Start the analysis
     checkForSound();
   };
 
